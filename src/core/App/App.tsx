@@ -1,11 +1,10 @@
 import { Box, Flex, useColorMode } from "@chakra-ui/react";
 import { Sidebar } from "../../layout/sidebar/sidebar.tsx";
 import { Navbar } from "../../layout/navbar/navbar.tsx";
-import { List, ProjectsList } from "../../marketplace/components/list/list";
+import { ProjectsList } from "../../marketplace/components/list/list";
 
 export function App() {
-  const { colorMode, toggleColorMode } = useColorMode();
-
+  const { colorMode } = useColorMode();
   return (
     <Box className="flex flex-col h-full min-h-screen overflow-y-hidden" bg={colorMode === "dark" ? "slate.800" : "white"}>
       <Navbar />
