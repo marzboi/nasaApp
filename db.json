@@ -15,6 +15,78 @@
           "name": "John Doe"
         }
       ]
+    },
+    {
+      "id": 2,
+      "name": "Project 2",
+      "description": "This is project 2",
+      "startDate": "2015-02-01",
+      "endData": "2015-02-28",
+      "isActive": true,
+      "dataUpdated": "2015-02-01",
+      "author": "Jane Smith",
+      "participants": [
+        {
+          "id": 2,
+          "name": "Jane Smith"
+        },
+        {
+          "id": 1,
+          "name": "John Doe"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Project 3",
+      "description": "This is project 3",
+      "startDate": "2015-03-01",
+      "endData": "2015-03-31",
+      "isActive": false,
+      "dataUpdated": "2015-03-01",
+      "author": "Alice Johnson",
+      "participants": [
+        {
+          "id": 3,
+          "name": "Alice Johnson"
+        }
+      ]
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "projects": [
+        {
+          "id": 1,
+          "name": "Project 1"
+        },
+        {
+          "id": 2,
+          "name": "Project 2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "projects": [
+        {
+          "id": 2,
+          "name": "Project 2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Alice Johnson",
+      "projects": [
+        {
+          "id": 3,
+          "name": "Project 3"
+        }
+      ]
     }
   ]
 }
