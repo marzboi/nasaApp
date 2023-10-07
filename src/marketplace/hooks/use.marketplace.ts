@@ -12,7 +12,7 @@ export function useMarketplace() {
   const dispatch: AppDispatch = useDispatch();
 
   const repo: ApiRepository<Project> = useMemo(
-    () => new ApiRepository<Project>("projects"),
+    () => new ApiRepository<Project>("http://localhost:3000/projects/"),
     []
   );
 
