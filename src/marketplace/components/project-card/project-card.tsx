@@ -1,4 +1,17 @@
 import { Project } from "../../models/data";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Flex,
+  Avatar,
+  Heading,
+  Box,
+  Text,
+  Image,
+  ListItem
+} from '@chakra-ui/react'
 
 type PropsType = {
   item: Project;
@@ -6,18 +19,23 @@ type PropsType = {
 
 export function ProjectCard({ item }: PropsType) {
   return (
-    <>
-      <li key={item.id} className="container text-center">
-        <div>
-          <h2>{item.name}</h2>
-          <img src={item.img} alt="" className="rounded mx-auto d-block" />
-          <p>{item.description}</p>
-          <p>
-            {item.author.firstName} {item.author.lastName}
-          </p>
-        </div>
-        <button className="btn btn-success">View</button>
-      </li>
-    </>
+    <Card maxW='md'>
+      <CardHeader>
+        <Flex spacing='4'>
+          <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
+            <Avatar name='Sr. Encheng' src='https://bit.ly/sage-adebayo' />
+            <Box>
+              <Heading size='sm'>{item.author.firstName} {item.author.lastName}</Heading>
+            </Box>
+          </Flex>
+        </Flex>
+      </CardHeader>
+      <CardBody>
+            <Image src={item.img} objectFit='cover' alt="Image of project"/>
+            <h2>{item.name}</h2>
+            <Text>{item.description}</Text>
+          <button className="btn btn-success">View</button>
+      </CardBody>
+    </Card>
   );
 }
