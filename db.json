@@ -1,52 +1,20 @@
 {
-  "characters": [
+  "projects": [
     {
       "id": 1,
-      "name": "Joffrey",
-      "lastname": "Baratheon",
-      "age": 18,
-      "reignyears": 3,
-      "alive": true,
-      "warcry": "You are all going to die"
-    },
-    {
-      "id": 2,
-      "name": "Jaime",
-      "lastname": "Lannister",
-      "age": 33,
-      "weapon": "sword",
-      "alive": true,
-      "warcry": "I strike first, and ask questions later",
-      "dexterity": 8
-    },
-    {
-      "id": 3,
-      "name": "Daenerys",
-      "lastname": "Targaryen",
-      "age": 29,
-      "weapon": "dragons",
-      "alive": false,
-      "warcry": "I strike first, and ask questions later",
-      "dexterity": 3
-    },
-    {
-      "id": 4,
-      "name": "Tyrion",
-      "lastname": "Lannister",
-      "age": 31,
-      "alive": true,
-      "warcry": "I think I will die soon",
-      "supports": "Daenerys"
-    },
-    {
-      "id": 5,
-      "name": "Broon",
-      "lastname": "Unknown",
-      "age": 45,
-      "alive": false,
-      "pelotismo": 0,
-      "warcry": "I am based",
-      "supports": "Jaime"
+      "name": "Project 1",
+      "description": "This is project 1",
+      "startDate": "2015-01-01",
+      "endData": "2015-01-31",
+      "isActive": true,
+      "dataUpdated": "2015-01-01",
+      "author": "John Doe",
+      "participants": [
+        {
+          "id": 1,
+          "name": "John Doe"
+        }
+      ]
     }
   ]
 }
