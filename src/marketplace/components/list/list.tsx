@@ -1,21 +1,21 @@
 import { useEffect } from "react";
 import { useMarketplace } from "../../hooks/use.marketplace";
 import { ProjectCard } from "../project-card/project-card";
+import { Flex, ListItem, List } from "@chakra-ui/react";
 
-export function List() {
+export function ProjectsList() {
   const { handleLoad, projects } = useMarketplace();
-
   useEffect(() => {
     handleLoad();
   }, [handleLoad]);
 
   return (
-    <>
-      <ul className="d-flex flex-row">
-        {projects.map((item) => (
-          <ProjectCard key={item.id} item={item}></ProjectCard>
-        ))}
-      </ul>
-    </>
+    <List className="d-flex flex-row">
+      {projects.map((item) => (
+        <ListItem key={item.id} className="container text-center">
+          <ProjectCard item={item} />
+        </ListItem>
+      ))}
+    </List>
   );
 }

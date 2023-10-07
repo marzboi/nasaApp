@@ -1,7 +1,13 @@
-import { useState } from "react";
 import { Project } from "../../models/data";
 import {
+  Avatar,
+  Box,
   Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Flex,
+  Heading,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -10,6 +16,8 @@ import {
   ModalHeader,
   ModalOverlay,
   useDisclosure,
+  Text,
+  Image,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -28,24 +36,29 @@ export function ProjectCard({ item }: PropsType) {
 
   return (
     <>
-      <li key={item.id} className="container-sm text-center">
-        <div>
+      <Card maxW="md">
+        <CardHeader>
+            <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
+              <Avatar name="Sr. Encheng" src="https://bit.ly/sage-adebayo" />
+              <Box>
+                <Heading size="sm">
+                  {item.author.firstName} {item.author.lastName}
+                </Heading>
+              </Box>
+            </Flex>
+        </CardHeader>
+        <CardBody>
+          <Image src={item.img} objectFit="cover" alt="Image of project" />
           <h2>{item.name}</h2>
-          <img src={item.img} alt="" className="rounded mx-auto d-block" />
-          <div>
-            <p>{item.description}</p>
-            <p>
-              {item.author.firstName} {item.author.lastName}
-            </p>
-          </div>
-        </div>
-        <button
-          className="btn btn-success"
-          onClick={() => handleSizeClick("full")}
-        >
-          View
-        </button>
-      </li>
+          <Text>{item.description}</Text>
+          <button
+            className="btn btn-success"
+            onClick={() => handleSizeClick("full")}
+          >
+            View
+          </button>
+        </CardBody>
+      </Card>
       <>
         <Modal onClose={onClose} size={size} isOpen={isOpen}>
           <ModalOverlay />
