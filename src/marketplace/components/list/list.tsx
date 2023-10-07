@@ -11,7 +11,7 @@ export function List() {
 
   return (
     <>
-      <ul>
+      <ul className="d-flex flex-row">
         {projects.map((item) => (
           <ProjectCard key={item.id} item={item}></ProjectCard>
         ))}
