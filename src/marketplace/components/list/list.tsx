@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useMarketplace } from "../../hooks/use.marketplace";
 import { ProjectCard } from "../project-card/project-card";
-import { Flex, ListItem, List } from "@chakra-ui/react";
+import { Flex, ListItem, List, Box } from "@chakra-ui/react";
 
 export function ProjectsList() {
   const { handleLoad, projects } = useMarketplace();
@@ -12,18 +12,18 @@ export function ProjectsList() {
 
   return (
     <List>
-      <Flex flexWrap="wrap" marginBottom="2rem">
+      <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gap="1rem" marginBottom="2rem">
         {projects.map((item) => (
           <ListItem
             key={item.id}
             className="container text-center"
-            marginRight="1rem"
+            marginRight="auto"
             marginBottom="1rem"
           >
             <ProjectCard item={item} />
           </ListItem>
         ))}
-      </Flex>
+      </Box>
     </List>
   );
 }
