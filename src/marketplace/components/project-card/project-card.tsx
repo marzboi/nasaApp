@@ -17,7 +17,7 @@ import {
   ModalOverlay,
   useDisclosure,
   Text,
-  Image,
+  Image, useColorMode,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -33,7 +33,7 @@ export function ProjectCard({ item }: PropsType) {
     setSize(newSize);
     onOpen();
   };
-
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
       <Card maxW="md">
@@ -51,12 +51,11 @@ export function ProjectCard({ item }: PropsType) {
           <Image src={item.img} objectFit="cover" alt="Image of project" />
           <h2>{item.name}</h2>
           <Text>{item.description}</Text>
-          <button
-            className="btn btn-success"
+          <Button
             onClick={() => handleSizeClick("full")}
           >
             View
-          </button>
+          </Button>
         </CardBody>
       </Card>
       <>

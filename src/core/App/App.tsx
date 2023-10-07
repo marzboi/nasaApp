@@ -1,17 +1,20 @@
+import { Box, Flex, useColorMode } from "@chakra-ui/react";
 import { Sidebar } from "../../layout/sidebar/sidebar.tsx";
 import { Navbar } from "../../layout/navbar/navbar.tsx";
-import {List, ProjectsList} from "../../marketplace/components/list/list";
+import { List, ProjectsList } from "../../marketplace/components/list/list";
 
 export function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
-    <div className="flex flex-col h-full min-h-screen overflow-y-hidden bg-slate-800">
+    <Box className="flex flex-col h-full min-h-screen overflow-y-hidden" bg={colorMode === "dark" ? "slate.800" : "white"}>
       <Navbar />
-      <div className="flex flex-row flex-1">
-        <div className="w-full">
+      <Flex className="flex flex-row flex-1">
+        <Box className="w-full">
           <ProjectsList />
-        </div>
+        </Box>
         <Sidebar />
-      </div>
-    </div>
+      </Flex>
+    </Box>
   );
 }
