@@ -2,6 +2,7 @@ export interface Project {
   id: number;
   name: string;
   description: string;
+  img: string;
   startDate: Date;
   endDate?: Date;
   isActive: boolean;

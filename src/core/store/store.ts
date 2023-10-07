@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import nasaReducer from "../../marketplace/redux/nasa.slice";
+import marketplaceReducer from "../../marketplace/redux/marketplace.slice";
 
 export const store = configureStore({
   reducer: {
-    nasa: nasaReducer,
+    marketplace: marketplaceReducer,
   },
 });
 
