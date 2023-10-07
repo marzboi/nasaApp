@@ -1,14 +1,17 @@
 import { Sidebar } from "../../layout/sidebar/sidebar.tsx";
 import { Navbar } from "../../layout/navbar/navbar.tsx";
 import { List } from "../../marketplace/components/list/list";
+
 export function App() {
   return (
-    <div className="flex flex-row h-full min-h-screen overflow-y-hidden bg-slate-800">
-      <div className="w-full">
-        <Navbar />
-        <List />
+    <div className="flex flex-col h-full min-h-screen overflow-y-hidden bg-slate-800">
+      <Navbar />
+      <div className="flex flex-row flex-1">
+        <div className="w-full">
+          <List />
+        </div>
+        <Sidebar />
       </div>
-      <Sidebar />
     </div>
   );
 }
