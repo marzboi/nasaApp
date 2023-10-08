@@ -38,14 +38,14 @@ export function ProjectCard({ item }: PropsType) {
     <>
       <Card maxW="md">
         <CardHeader>
-            <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
-              <Avatar name="Sr. Encheng" src="https://bit.ly/sage-adebayo" />
-              <Box>
-                <Heading size="sm">
-                  {item.author.firstName} {item.author.lastName}
-                </Heading>
-              </Box>
-            </Flex>
+          <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
+            <Avatar name="Sr. Encheng" src="https://bit.ly/sage-adebayo" />
+            <Box>
+              <Heading size="sm">
+                {item.author.firstName} {item.author.lastName}
+              </Heading>
+            </Box>
+          </Flex>
         </CardHeader>
         <CardBody>
           <Image src={item.img} objectFit="cover" alt="Image of project" />

@@ -1,6 +1,6 @@
 import { Sidebar } from "../../layout/sidebar/sidebar.tsx";
 import { Navbar } from "../../layout/navbar/navbar.tsx";
-import {List, ProjectsList} from "../../marketplace/components/list/list";
+import { ProjectsList } from "../../marketplace/components/list/list";
 
 export function App() {
   return (
