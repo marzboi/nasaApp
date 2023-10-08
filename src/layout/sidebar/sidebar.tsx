@@ -28,7 +28,11 @@ export function Sidebar() {
           <SidebarContent onClose={onClose} />
         </DrawerContent>
       </Drawer>
-      <MobileNav display={{ base: "flex", md: "none" }} onOpen={onOpen} />
+      <MobileNav
+        display={{ base: "flex", md: "none" }}
+        onOpen={onOpen}
+        marginTop={12}
+      />
       <Box ml={{ base: 0, md: 60 }} p="4" />
     </Box>
   );
