@@ -17,13 +17,22 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import {SearchBar} from "../../marketplace/components/search-bar/search-bar.tsx";
+import { SearchBar } from "../../marketplace/components/search-bar/search-bar.tsx";
 
 export function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+      <Box
+        bg={useColorModeValue("gray.100", "gray.900")}
+        px={4}
+        position="fixed"
+        top="0"
+        left="0"
+        right="0"
+        boxShadow="md"
+        zIndex="sticky"
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
             <div className={styles.logo}>
@@ -36,7 +45,7 @@ export function Navbar() {
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
-              <SearchBar/>
+              <SearchBar />
               <Menu>
                 <MenuButton
                   as={Button}
