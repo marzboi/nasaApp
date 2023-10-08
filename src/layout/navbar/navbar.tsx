@@ -68,7 +68,7 @@ export function Navbar() {
                 >
                   <Avatar
                     size={"sm"}
-                    src={"https://avatars.dicebear.com/api/male/username.svg"}
+                    src={"https://bit.ly/sage-adebayo"}
                   />
                 </MenuButton>
                 <MenuList alignItems={"center"}>
@@ -76,7 +76,7 @@ export function Navbar() {
                   <Center>
                     <Avatar
                       size={"2xl"}
-                      src={"https://avatars.dicebear.com/api/male/username.svg"}
+                      src={"https://bit.ly/sage-adebayo"}
                     />
                   </Center>
                   <br />

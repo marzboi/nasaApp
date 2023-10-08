@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useMarketplace } from "../../hooks/use.marketplace";
 import { ProjectCard } from "../project-card/project-card";
-import { Flex, ListItem, List, Box } from "@chakra-ui/react";
+import { ListItem, List, Box } from "@chakra-ui/react";
 
 export function ProjectsList() {
   const { handleLoad, projects } = useMarketplace();
