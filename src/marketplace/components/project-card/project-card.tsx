@@ -19,8 +19,10 @@ import {
   Text,
   Image,
   Center,
+  Stack,
 } from "@chakra-ui/react";
 import React from "react";
+import styles from "./project-card.module.scss";
 
 type PropsType = {
   item: Project;
@@ -70,15 +72,18 @@ export function ProjectCard({ item }: PropsType) {
         <Modal onClose={onClose} size={size} isOpen={isOpen}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>
+            <ModalHeader className={styles.title}>
               {item.name} : {item.id}
             </ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              <Text>{item.description}</Text>
-              <Text>
-                {item.author.firstName} {item.author.lastName}
-              </Text>
+              <Stack spacing={10} className={styles.modal}>
+                <Text>{item.description}</Text>
+                <Text>
+                  {item.author.firstName} {item.author.lastName}
+                </Text>
+                <Image src={item.img} boxSize="400px" />
+              </Stack>
             </ModalBody>
             <ModalFooter>
               <Button onClick={onClose}>Close</Button>

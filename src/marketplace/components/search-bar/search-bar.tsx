@@ -1,10 +1,9 @@
-import React, { ReactElement, ReactNode } from "react";
 import {
   Button,
   Input,
   InputGroup,
   InputLeftElement,
-  InputRightAddon
+  InputRightAddon,
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 
