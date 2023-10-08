@@ -56,7 +56,7 @@ export function ProjectCard({ item }: PropsType) {
           </CardHeader>
           <CardBody>
             <Image
-              src={item.img}
+              src={`${item.img + Math.floor(Math.random() * 12) + 1}`}
               objectFit="cover"
               borderRadius="xl"
               mx="auto"
@@ -66,7 +66,7 @@ export function ProjectCard({ item }: PropsType) {
               {item.name}
             </Heading>
             <Text>{item.description}</Text>
-            <Button onClick={() => handleSizeClick("full")}>View</Button>
+            <Button onClick={() => handleSizeClick("xl")}>View</Button>
           </CardBody>
         </Card>
         <Modal onClose={onClose} size={size} isOpen={isOpen}>
@@ -82,7 +82,10 @@ export function ProjectCard({ item }: PropsType) {
                 <Text>
                   {item.author.firstName} {item.author.lastName}
                 </Text>
-                <Image src={item.img} boxSize="400px" />
+                <Image
+                  src={`${item.img + Math.floor(Math.random() * 12) + 1}`}
+                  boxSize="400px"
+                />
               </Stack>
             </ModalBody>
             <ModalFooter>
