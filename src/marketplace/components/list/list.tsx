@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useMarketplace } from "../../hooks/use.marketplace";
 import { ProjectCard } from "../project-card/project-card";
 import { ListItem, List, Box } from "@chakra-ui/react";
@@ -6,16 +6,26 @@ import styles from "./list.module.scss";
 
 export function ProjectsList() {
   const { handleLoad, projects } = useMarketplace();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     handleLoad();
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, [handleLoad]);
 
   return (
     <List className={styles.list}>
       <Box
         display="grid"
-        gridTemplateColumns="repeat(3, 1fr)"
+        gridTemplateColumns={isMobile ? "1fr" : "repeat(3, 1fr)"}
         gap="1rem"
         marginBottom="2rem"
       >
