@@ -17,6 +17,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import {SearchBar} from "../../marketplace/components/search-bar/search-bar.tsx";
 
 export function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -35,7 +36,7 @@ export function Navbar() {
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
-
+              <SearchBar/>
               <Menu>
                 <MenuButton
                   as={Button}
@@ -43,8 +44,9 @@ export function Navbar() {
                   variant={"link"}
                   cursor={"pointer"}
                   minW={0}
+                  marginRight={5}
                 >
-                  <Avatar size={"sm"} src={"./profile.jpeg"} />
+                  <Avatar size={"md"} src={"./profile.jpeg"} />
                 </MenuButton>
                 <MenuList alignItems={"center"}>
                   <br />
