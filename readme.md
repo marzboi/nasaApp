@@ -51,7 +51,7 @@ We welcome contributions from the community. If you'd like to contribute, please
 This project is open-source and available under the [MIT License](LICENSE).
 
 
-Link to back 
+Link to back end 
 ```
-end https://github.com/marzboi/NasaApp-Back 
+https://github.com/marzboi/NasaApp-Back 
 ```
