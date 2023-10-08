@@ -1,6 +1,14 @@
-import {Flex, IconButton, useColorModeValue} from "@chakra-ui/react";
-import {FiMenu} from "react-icons/fi";
-import React from "react";
+import {
+  Flex,
+  FlexProps,
+  IconButton,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { FiMenu } from "react-icons/fi";
+
+interface MobileProps extends FlexProps {
+  onOpen: () => void;
+}
 
 export const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
   return (
@@ -9,11 +17,12 @@ export const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       px={{ base: 4, md: 24 }}
       height="20"
       alignItems="center"
-      bg={useColorModeValue('white', 'gray.900')}
+      bg={useColorModeValue("white", "gray.900")}
       borderBottomWidth="1px"
-      borderBottomColor={useColorModeValue('gray.200', 'gray.900')}
+      borderBottomColor={useColorModeValue("gray.200", "gray.900")}
       justifyContent="flex-start"
-      {...rest}>
+      {...rest}
+    >
       <IconButton
         variant="outline"
         onClick={onOpen}
@@ -21,5 +30,5 @@ export const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         icon={<FiMenu />}
       />
     </Flex>
-  )
-}
+  );
+};
