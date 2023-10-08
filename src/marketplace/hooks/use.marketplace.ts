@@ -12,7 +12,7 @@ export function useMarketplace() {
   const dispatch: AppDispatch = useDispatch();
 
   const repo: ApiRepository<Project> = useMemo(
-    () => new ApiRepository<Project>("http://localhost:3000/projects/?_limit=10"),
+    () => new ApiRepository<Project>("https://eurekahub.onrender.com/projects"),
     []
   );
 

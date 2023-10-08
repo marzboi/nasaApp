@@ -5,6 +5,6 @@ export class ApiRepository<T extends { id: string | number }> {
 
   async fetchAll(): Promise<T[]> {
     const { data } = await axios.get(this.url);
-    return data;
+    return data.items;
   }
 }
