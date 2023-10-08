@@ -61,6 +61,8 @@ export function ProjectCard({ item }: PropsType) {
               borderRadius="xl"
               mx="auto"
               alt="Image of project"
+              cursor={"pointer"}
+              onClick={() => handleSizeClick("xl")}
             />
             <Heading as="h4" size="md">
               {item.name}
