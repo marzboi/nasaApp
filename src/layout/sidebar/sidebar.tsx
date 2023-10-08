@@ -1,7 +1,43 @@
+import { Box, Link, Text } from '@chakra-ui/react';
+
+
 export function Sidebar() {
+
   return (
-    <div className="w-2/12 bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-slate-500 via-gray-900 to-slate-500 text-center border-r-2 border-slate-300 text-slate-200 flex flex-col justify-between ">
-      <h1>Lorem ipsum</h1>
-    </div>
+    <Box
+      width="250px"
+      height="100vh"
+      top="0"
+      left="0"
+      display="flex"
+      flexDirection="column"
+      p="4"
+    >
+      <Text fontSize="xl" fontWeight="bold" mb="4">
+        My Sidebar
+      </Text>
+      <Box>
+        <Text fontSize="lg" fontWeight="bold" mb="2">
+          My Projects
+        </Text>
+        <Link href="#">Project 1</Link>
+        <Link href="#">Project 2</Link>
+        <Link href="#">Project 3</Link>
+      </Box>
+      <Box mt="4">
+        <Text fontSize="lg" fontWeight="bold" mb="2">
+          Last Project Seen
+        </Text>
+        <Link href="#">Last Project</Link>
+      </Box>
+      <Box mt="4">
+        <Text fontSize="lg" fontWeight="bold" mb="2">
+          Partners
+        </Text>
+        <Link href="#">Partner 1</Link>
+        <Link href="#">Partner 2</Link>
+        <Link href="#">Partner 3</Link>
+      </Box>
+    </Box>
   );
-}
+};
